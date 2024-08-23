@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.2
+%define		kdeappsver	24.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		klines
 Summary:	klines
 Name:		ka6-%{kaname}
-Version:	24.05.2
+Version:	24.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	442ea2a6f8ee4e9fe2f448b4c7664052
+# Source0-md5:	36c95ceafb6669639d7b36afaa345d3a
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -49,9 +49,9 @@ is removed from the board, therefore freeing precious space.
 
 %description -l pl.UTF-8
 KLines jest prostą albo bardzo wciągającą grą dla jednej osoby. Gracz
-ma przemieszczać kolorowe piłki po planszy, zbierając je po pięć
-w linii jednego koloru. Kompletne linie są usuwane z planszy
-zwalniając cenne miejsce.
+ma przemieszczać kolorowe piłki po planszy, zbierając je po pięć w
+linii jednego koloru. Kompletne linie są usuwane z planszy zwalniając
+cenne miejsce.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -88,3 +88,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/klines
 %{_datadir}/metainfo/org.kde.klines.appdata.xml
 %{_datadir}/qlogging-categories6/klines.categories
+%{_datadir}/qlogging-categories6/klines.renamecategories
